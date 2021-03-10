@@ -2,6 +2,15 @@ import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 
 // eslint-disable-next-line import/no-mutable-exports
 let theme = createMuiTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 980,
+      lg: 1280,
+      xl: 1920
+    }
+  },
   palette: {
     type: 'dark',
     primary: {

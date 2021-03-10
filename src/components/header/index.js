@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link as ReactRouterLink, useLocation } from 'react-router-dom';
 import {
   Container,
   AppBar,
@@ -7,10 +8,15 @@ import {
   Tabs,
   Tab,
   Typography,
-  IconButton
+  IconButton,
+  Hidden,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText
 } from '@material-ui/core';
+import DehazeIcon from '@material-ui/icons/Dehaze';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import { Link as ReactRouterLink, useLocation } from 'react-router-dom';
 import logo from '../../logo.svg';
 import routes from '../../constants/routes';
 import getInitialTab from '../../utils/getInitialTab';
@@ -19,14 +25,25 @@ import useStyles from './styles';
 export default function Header() {
   const classes = useStyles();
   const location = useLocation();
-  const [value, setValue] = useState(getInitialTab(location));
+  const [tabPosition, setTabPosition] = useState(getInitialTab(location));
+  const [drawerState, setDrawerState] = useState(false);
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
+  const handleTabChange = (event, newValue) => {
+    setTabPosition(newValue);
+  };
+
+  const toggleDrawer = (open) => (event) => {
+    if (
+      event.type === 'keydown' &&
+      (event.key === 'Tab' || event.key === 'Shift')
+    ) {
+      return;
+    }
+    setDrawerState(open);
   };
 
   useEffect(() => {
-    setValue(getInitialTab(location));
+    setTabPosition(getInitialTab(location));
   }, [location]);
 
   return (
@@ -37,17 +54,27 @@ export default function Header() {
             <Button
               component={ReactRouterLink}
               disableRipple
-              className={classes.logoButton}
               to="/"
+              className={classes.logoButton}
             >
               <img src={logo} alt="BLENDER-STYLE" className={classes.logoImg} />
               <Typography className={classes.logoText}>
-                {'{ BLENDER-STYLE }'}
+                {`{ BLENDER--STYLE }`}
               </Typography>
             </Button>
           </div>
           <Toolbar disableGutters>
-            <Tabs onChange={handleChange} value={value}>
+            <Tabs
+              onChange={handleTabChange}
+              value={tabPosition}
+              className={classes.tabs}
+              textColor="secondary"
+              TabIndicatorProps={{
+                style: {
+                  height: 3
+                }
+              }}
+            >
               {routes.map((route) => (
                 <Tab
                   component={ReactRouterLink}
@@ -62,10 +89,47 @@ export default function Header() {
             <IconButton
               component="a"
               href="https://github.com/petyoMarov/blender-style"
-              disableRipple
+              className={classes.githubButton}
             >
               <GitHubIcon />
             </IconButton>
+            <Hidden mdUp>
+              <IconButton onClick={toggleDrawer(true)}>
+                <DehazeIcon fontSize="large" />
+              </IconButton>
+              <Drawer
+                anchor="top"
+                open={drawerState}
+                onClose={toggleDrawer(false)}
+              >
+                <div
+                  role="presentation"
+                  onClick={toggleDrawer(false)}
+                  onKeyDown={toggleDrawer(false)}
+                >
+                  <List>
+                    {routes.map((route) => (
+                      <ListItem
+                        component={ReactRouterLink}
+                        key={route.title}
+                        to={route.path}
+                        disableRipple
+                        className={classes.drawerLi}
+                      >
+                        <ListItemText primary={route.title} />
+                      </ListItem>
+                    ))}
+                    <ListItem
+                      component="a"
+                      href="https://github.com/petyoMarov/blender-style"
+                      className={classes.drawerLi}
+                    >
+                      <ListItemText primary="GitHub Repo" />
+                    </ListItem>
+                  </List>
+                </div>
+              </Drawer>
+            </Hidden>
           </Toolbar>
         </AppBar>
       </Container>

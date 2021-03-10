@@ -5,7 +5,7 @@ const tabRoutes = [
   },
   {
     title: 'Neural Style',
-    path: '/neutra-style'
+    path: '/neural-style'
   },
   {
     title: 'Super Resolution',

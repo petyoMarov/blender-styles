@@ -8,6 +8,12 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
+        <Route exact path="/image-colorizer">
+          <Home />
+        </Route>
+        <Route exact path="/neural-style">
+          <Home />
+        </Route>
       </Switch>
     </Router>
   );

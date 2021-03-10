@@ -3,7 +3,7 @@ const getInitialTab = (location) => {
     return 0;
   }
 
-  if (location.pathname.includes('neutral-style')) {
+  if (location.pathname.includes('neural-style')) {
     return 1;
   }
 

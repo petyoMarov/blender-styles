@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme) => ({
   container: {
     padding: 0
   },
+
   header: {
     display: 'flex',
     flexDirection: 'row',
@@ -16,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     height: 60,
     padding: '0 15px'
   },
+
   logoButton: {
     padding: 0,
     '&:hover': {
@@ -25,15 +27,39 @@ const useStyles = makeStyles((theme) => ({
   logoImg: {
     width: '35px'
   },
+
   logoText: {
-    fontSize: '30px',
+    fontSize: '28px',
     letterSpacing: '-4px',
     marginLeft: '10px',
     fontWeight: 'bold'
   },
+
+  tabs: {
+    [theme.breakpoints.down('sm')]: {
+      display: 'none'
+    }
+  },
+
   tab: {
+    fontWeight: 'bold',
     '&:hover': {
       backgroundColor: 'rgba(255, 255, 255, 0.08)'
+    }
+  },
+
+  githubButton: {
+    [theme.breakpoints.down('sm')]: {
+      display: 'none'
+    }
+  },
+
+  drawerLi: {
+    color: theme.palette.text.secondary,
+    textAlign: 'center',
+    '&:hover': {
+      backgroundColor: 'rgba(255, 255, 255, 0.08)',
+      color: 'white'
     }
   }
 }));
