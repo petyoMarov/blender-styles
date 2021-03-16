@@ -3,17 +3,14 @@ import {
   IconButton,
   Drawer,
   List,
-  ListItem,
   ListItemText
 } from '@material-ui/core';
 import DehazeIcon from '@material-ui/icons/Dehaze';
 import { Link as ReactRouterLink } from 'react-router-dom';
+import DrawerListItem from './styles';
 import routes from '../../constants/routes';
-import useStyles from './styles';
 
 export default function DrawerMenu({ toggleDrawer, drawerState }) {
-  const classes = useStyles();
-
   return (
     <Hidden mdUp>
       <IconButton onClick={toggleDrawer(true)}>
@@ -27,23 +24,21 @@ export default function DrawerMenu({ toggleDrawer, drawerState }) {
         >
           <List>
             {routes.map((route) => (
-              <ListItem
+              <DrawerListItem
                 component={ReactRouterLink}
                 key={route.title}
                 to={route.path}
                 disableRipple
-                className={classes.drawerLi}
               >
                 <ListItemText primary={route.title} />
-              </ListItem>
+              </DrawerListItem>
             ))}
-            <ListItem
+            <DrawerListItem
               component="a"
               href="https://github.com/petyoMarov/blender-style"
-              className={classes.drawerLi}
             >
               <ListItemText primary="GitHub Repo" />
-            </ListItem>
+            </DrawerListItem>
           </List>
         </div>
       </Drawer>

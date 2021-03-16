@@ -1,18 +1,15 @@
-import { Tabs, Tab, IconButton } from '@material-ui/core';
 import { Link as ReactRouterLink } from 'react-router-dom';
 import GitHubIcon from '@material-ui/icons/GitHub';
+
+import { GithubIconButton, Navigation, NavigationTab } from './styles';
 import routes from '../../constants/routes';
-import useStyles from './styles';
 
 export default function NavBar({ handleTabChange, tabPosition }) {
-  const classes = useStyles();
-
   return (
     <>
-      <Tabs
+      <Navigation
         onChange={handleTabChange}
         value={tabPosition}
-        className={classes.tabs}
         textColor="secondary"
         TabIndicatorProps={{
           style: {
@@ -21,23 +18,21 @@ export default function NavBar({ handleTabChange, tabPosition }) {
         }}
       >
         {routes.map((route) => (
-          <Tab
+          <NavigationTab
             component={ReactRouterLink}
             key={route.title}
             label={route.title}
             to={route.path}
             disableRipple
-            className={classes.tab}
           />
         ))}
-      </Tabs>
-      <IconButton
+      </Navigation>
+      <GithubIconButton
         component="a"
         href="https://github.com/petyoMarov/blender-style"
-        className={classes.githubButton}
       >
         <GitHubIcon />
-      </IconButton>
+      </GithubIconButton>
     </>
   );
 }

@@ -1,22 +1,30 @@
-import { makeStyles } from '@material-ui/core/styles';
+import styled from 'styled-components/macro';
+import Button from '@material-ui/core/Button';
 
-const useStyles = makeStyles((theme) => ({
-  logoButton: {
-    padding: 0,
-    '&:hover': {
-      backgroundColor: 'unset'
-    }
-  },
-  logoImg: {
-    width: '35px'
-  },
+export const LogoButton = styled(Button)`
+  padding: 0;
 
-  logoText: {
-    fontSize: '28px',
-    letterSpacing: '-4px',
-    marginLeft: '10px',
-    fontWeight: 'bold'
+  &:hover {
+    background-color: unset;
   }
-}));
+`;
 
-export default useStyles;
+export const LogoImg = styled.img`
+  width: 1.75rem;
+
+  @media (max-width: 600px) {
+    width: 1.5625rem;
+    margin-right: 1.4375rem;
+  }
+`;
+
+export const LogoText = styled.p`
+  font-size: 1.75rem;
+  letter-spacing: -4px;
+  margin-left: 0.625rem;
+  font-weight: bold;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
+`;

@@ -1,19 +1,17 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Box, Container, AppBar, Toolbar } from '@material-ui/core';
-import Logo from '../../components/logo';
-import NavBar from '../../components/navBar';
-import DrawerMenu from '../../components/drawer-menu';
+import { Box, Toolbar } from '@material-ui/core';
+
+import { Container, AppBar } from './styles';
+import { Logo, NavBar, DrawerMenu } from '../../components';
 import getInitialTab from '../../utils/getInitialTab';
-import useStyles from './styles';
 
 export default function Header() {
-  const classes = useStyles();
   const location = useLocation();
   const [tabPosition, setTabPosition] = useState(getInitialTab(location));
   const [drawerState, setDrawerState] = useState(false);
 
-  const handleTabChange = (event, newValue) => {
+  const handleTabChange = (newValue) => {
     setTabPosition(newValue);
   };
 
@@ -33,8 +31,8 @@ export default function Header() {
 
   return (
     <Box bgcolor="background.paper">
-      <Container maxWidth="xl" className={classes.container}>
-        <AppBar position="relative" className={classes.appBar}>
+      <Container maxWidth="lg">
+        <AppBar position="relative">
           <Logo />
           <Toolbar disableGutters>
             <NavBar

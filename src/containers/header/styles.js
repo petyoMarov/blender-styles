@@ -1,20 +1,20 @@
-import { makeStyles } from '@material-ui/core/styles';
+import styled from 'styled-components/macro';
+import {
+  Container as MUIContainer,
+  AppBar as MUIAppBar
+} from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
-  container: {
-    padding: 0
-  },
+export const Container = styled(MUIContainer)`
+  padding: 0;
+`;
 
-  appBar: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    boxShadow: 'unset',
-    height: 60,
-    padding: '0 15px',
-    backgroundColor: theme.palette.background.paper
-  }
-}));
-
-export default useStyles;
+export const AppBar = styled(MUIAppBar)`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: unset;
+  height: 3.75rem;
+  padding: 0 0.9375rem;
+  background-color: #424242;
+`;

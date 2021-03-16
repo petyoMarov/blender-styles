@@ -1,11 +1,11 @@
-import Header from '../containers/header';
-import Jumbotron from '../containers/jumbotron';
+import { Jumbotron } from '../containers';
+import Layout from '../containers/Layout';
+import pageFeature from '../fixtures/page-feature';
 
 export default function Home() {
   return (
-    <>
-      <Header />
+    <Layout pageFeature={pageFeature.home}>
       <Jumbotron />
-    </>
+    </Layout>
   );
 }

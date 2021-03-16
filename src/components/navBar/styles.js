@@ -1,24 +1,24 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { Tabs, Tab, IconButton } from '@material-ui/core';
+import styled from 'styled-components/macro';
 
-const useStyles = makeStyles((theme) => ({
-  tabs: {
-    [theme.breakpoints.down('sm')]: {
-      display: 'none'
-    }
-  },
-
-  tab: {
-    fontWeight: 'bold',
-    '&:hover': {
-      backgroundColor: 'rgba(255, 255, 255, 0.08)'
-    }
-  },
-
-  githubButton: {
-    [theme.breakpoints.down('sm')]: {
-      display: 'none'
-    }
+export const Navigation = styled(Tabs)`
+  @media (max-width: 980px) {
+    display: none;
   }
-}));
+`;
 
-export default useStyles;
+export const NavigationTab = styled(Tab)`
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'Ubuntu', 'Open Sans', sans-serif;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+`;
+
+export const GithubIconButton = styled(IconButton)`
+  @media (max-width: 980px) {
+    display: none;
+  }
+`;
