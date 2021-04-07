@@ -1,43 +1,39 @@
-import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
+import { createMuiTheme } from '@material-ui/core/styles';
 
-// eslint-disable-next-line import/no-mutable-exports
-let theme = createMuiTheme({
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 600,
-      md: 980,
-      lg: 1280,
-      xl: 1920
-    }
-  },
+export const theme = createMuiTheme({
   palette: {
     type: 'dark',
     primary: {
-      main: '#2A2A2A'
+      main: '#000104'
     },
     secondary: {
-      main: '#4AADEB'
+      main: '#0Cafff'
     },
     background: {
-      default: '#111111'
+      default: '#000104'
+    },
+    text: {
+      primary: '#000104'
     }
-  },
-  typography: {
-    fontFamily: "'Open Sans', 'Arial', sans-serif",
-    fontSize: 16
   },
   overrides: {
     MuiCssBaseline: {
       '@global': {
         html: {
-          fontFamily: ['Open Sans', 'Arial', 'sans-serif'].join(',')
+          fontFamily: ['Ubuntu', 'Open Sans', 'sans-serif'].join(',')
+        },
+        body: {
+          fontFamily: ['Ubuntu', 'Open Sans', 'sans-serif'].join(',')
         }
+      }
+    },
+    MuiFormLabel: {
+      root: {
+        fontFamily: ['Ubuntu', 'Open Sans', 'sans-serif'].join(','),
+        color: '#000104'
       }
     }
   }
 });
-
-theme = responsiveFontSizes(theme);
 
 export default theme;

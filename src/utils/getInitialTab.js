@@ -7,11 +7,11 @@ const getInitialTab = (location) => {
     return 1;
   }
 
-  if (location.pathname.includes('super-resolution')) {
+  if (location.pathname.includes('toonify-yourself')) {
     return 2;
   }
 
-  if (location.pathname.includes('toonify-yourself')) {
+  if (location.pathname.includes('super-resolution')) {
     return 3;
   }
 

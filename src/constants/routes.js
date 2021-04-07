@@ -8,12 +8,12 @@ const tabRoutes = [
     path: '/neural-style'
   },
   {
-    title: 'Super Resolution',
-    path: '/super-resolution'
-  },
-  {
     title: 'Toonify Yourself',
     path: '/toonify-yourself'
+  },
+  {
+    title: 'Super Resolution',
+    path: '/super-resolution'
   }
 ];
 
