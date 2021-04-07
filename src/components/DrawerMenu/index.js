@@ -1,23 +1,16 @@
-import {
-  Hidden,
-  IconButton,
-  Drawer,
-  List,
-  ListItemText
-} from '@material-ui/core';
-import DehazeIcon from '@material-ui/icons/Dehaze';
+import { Hidden, IconButton, Drawer, List } from '@material-ui/core';
 import { Link as ReactRouterLink } from 'react-router-dom';
-import DrawerListItem from './styles';
+import { PresentationDiv, DrawerListItem, Icon, ListItemText } from './styles';
 import routes from '../../constants/routes';
 
 export default function DrawerMenu({ toggleDrawer, drawerState }) {
   return (
     <Hidden mdUp>
       <IconButton onClick={toggleDrawer(true)}>
-        <DehazeIcon fontSize="large" />
+        <Icon fontSize="large" />
       </IconButton>
       <Drawer anchor="top" open={drawerState} onClose={toggleDrawer(false)}>
-        <div
+        <PresentationDiv
           role="presentation"
           onClick={toggleDrawer(false)}
           onKeyDown={toggleDrawer(false)}
@@ -40,7 +33,7 @@ export default function DrawerMenu({ toggleDrawer, drawerState }) {
               <ListItemText primary="GitHub Repo" />
             </DrawerListItem>
           </List>
-        </div>
+        </PresentationDiv>
       </Drawer>
     </Hidden>
   );

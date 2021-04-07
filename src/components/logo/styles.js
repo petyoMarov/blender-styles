@@ -1,30 +1,25 @@
 import styled from 'styled-components/macro';
 import Button from '@material-ui/core/Button';
 
+export const LogoContainer = styled.div``;
+
 export const LogoButton = styled(Button)`
   padding: 0;
+  font-family: 'Ubuntu', 'Open Sans', 'sans-serif';
 
   &:hover {
     background-color: unset;
   }
 `;
 
-export const LogoImg = styled.img`
-  width: 1.75rem;
-
-  @media (max-width: 600px) {
-    width: 1.5625rem;
-    margin-right: 1.4375rem;
-  }
-`;
-
 export const LogoText = styled.p`
-  font-size: 1.75rem;
+  font-size: 28px;
   letter-spacing: -4px;
-  margin-left: 0.625rem;
   font-weight: bold;
+  color: #dfdfea;
+  margin: 0;
 
-  @media (max-width: 600px) {
-    display: none;
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
   }
 `;

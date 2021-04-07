@@ -1,10 +1,14 @@
 import styled from 'styled-components/macro';
-import {
-  Container as MUIContainer,
-  AppBar as MUIAppBar
-} from '@material-ui/core';
+import { Box, Container, AppBar as MUIAppBar } from '@material-ui/core';
 
-export const Container = styled(MUIContainer)`
+export const NavWrapper = styled(Box)`
+  background-color: #000104;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+`;
+
+export const HeaderContainer = styled(Container)`
   padding: 0;
 `;
 
@@ -14,7 +18,7 @@ export const AppBar = styled(MUIAppBar)`
   justify-content: space-between;
   align-items: center;
   box-shadow: unset;
-  height: 3.75rem;
-  padding: 0 0.9375rem;
-  background-color: #424242;
+  height: 60px;
+  padding: 0 24px;
+  background-color: #000104;
 `;

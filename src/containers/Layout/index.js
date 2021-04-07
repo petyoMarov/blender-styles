@@ -1,12 +1,12 @@
-import PageFeature from '../../components/PageFeature';
-import { Header } from '../index';
+import Header from '../Header';
+import { Footer } from '../../components';
 
-export default function Layout({ pageFeature, children }) {
+export default function Layout({ children }) {
   return (
     <>
       <Header />
-      <PageFeature pageFeature={pageFeature} />
       {children}
+      <Footer />
     </>
   );
 }

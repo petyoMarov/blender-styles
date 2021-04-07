@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Box, Toolbar } from '@material-ui/core';
+import Toolbar from '@material-ui/core/Toolbar';
 
-import { Container, AppBar } from './styles';
+import { HeaderContainer, NavWrapper, AppBar } from './styles';
 import { Logo, NavBar, DrawerMenu } from '../../components';
 import getInitialTab from '../../utils/getInitialTab';
 
@@ -30,8 +30,8 @@ export default function Header() {
   }, [location]);
 
   return (
-    <Box bgcolor="background.paper">
-      <Container maxWidth="lg">
+    <NavWrapper>
+      <HeaderContainer maxWidth="lg">
         <AppBar position="relative">
           <Logo />
           <Toolbar disableGutters>
@@ -42,7 +42,7 @@ export default function Header() {
             <DrawerMenu toggleDrawer={toggleDrawer} drawerState={drawerState} />
           </Toolbar>
         </AppBar>
-      </Container>
-    </Box>
+      </HeaderContainer>
+    </NavWrapper>
   );
 }

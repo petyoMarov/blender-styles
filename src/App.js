@@ -1,5 +1,12 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './pages/home';
+import {
+  Home,
+  ImageColorization,
+  NeuralStyle,
+  ToonifyYourself,
+  SuperResolution,
+  PageNotFound
+} from './pages';
 
 function App() {
   return (
@@ -8,11 +15,20 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/image-colorizer">
-          <Home />
+        <Route path="/image-colorizer">
+          <ImageColorization />
         </Route>
-        <Route exact path="/neural-style">
-          <Home />
+        <Route path="/neural-style">
+          <NeuralStyle />
+        </Route>
+        <Route path="/toonify-yourself">
+          <ToonifyYourself />
+        </Route>
+        <Route path="/super-resolution">
+          <SuperResolution />
+        </Route>
+        <Route>
+          <PageNotFound />
         </Route>
       </Switch>
     </Router>

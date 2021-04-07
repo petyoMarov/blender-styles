@@ -8,9 +8,10 @@ export const Navigation = styled(Tabs)`
 `;
 
 export const NavigationTab = styled(Tab)`
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: bold;
   font-family: 'Ubuntu', 'Open Sans', sans-serif;
+  color: #dfdfea;
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.08);

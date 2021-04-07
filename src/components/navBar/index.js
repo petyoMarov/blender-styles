@@ -28,6 +28,7 @@ export default function NavBar({ handleTabChange, tabPosition }) {
         ))}
       </Navigation>
       <GithubIconButton
+        target="_blank"
         component="a"
         href="https://github.com/petyoMarov/blender-style"
       >

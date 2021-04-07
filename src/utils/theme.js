@@ -1,16 +1,37 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
-const theme = createMuiTheme({
+export const theme = createMuiTheme({
   palette: {
     type: 'dark',
     primary: {
-      main: '#2a2a2a'
+      main: '#000104'
     },
     secondary: {
-      main: '#4aadeb'
+      main: '#0Cafff'
     },
     background: {
-      default: '#111111'
+      default: '#000104'
+    },
+    text: {
+      primary: '#000104'
+    }
+  },
+  overrides: {
+    MuiCssBaseline: {
+      '@global': {
+        html: {
+          fontFamily: ['Ubuntu', 'Open Sans', 'sans-serif'].join(',')
+        },
+        body: {
+          fontFamily: ['Ubuntu', 'Open Sans', 'sans-serif'].join(',')
+        }
+      }
+    },
+    MuiFormLabel: {
+      root: {
+        fontFamily: ['Ubuntu', 'Open Sans', 'sans-serif'].join(','),
+        color: '#000104'
+      }
     }
   }
 });
