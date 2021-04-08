@@ -1,10 +1,9 @@
-import { Box } from '@material-ui/core';
 import { InfoSection } from '../../components';
 import infoSectionsContent from '../../fixtures/info-sections-content';
 
 export default function InfoContainer() {
   return (
-    <Box>
+    <section>
       {infoSectionsContent.map((data) => (
         <InfoSection
           key={data.path}
@@ -19,6 +18,6 @@ export default function InfoContainer() {
           subtitle={data.subtitle}
         />
       ))}
-    </Box>
+    </section>
   );
 }

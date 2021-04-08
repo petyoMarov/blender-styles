@@ -1,4 +1,4 @@
-import video from '../../video/video.mp4';
+import video from '../../assets/video/video.mp4';
 import {
   HeroContainer,
   HeroBg,

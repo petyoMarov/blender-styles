@@ -4,7 +4,11 @@ import { LogoContainer, LogoButton, LogoText } from './styles';
 export default function Logo() {
   return (
     <LogoContainer>
-      <LogoButton component={ReactRouterLink} disableRipple to="/">
+      <LogoButton
+        component={ReactRouterLink}
+        disableRipple
+        to="/blender-styles/"
+      >
         <LogoText>{`{ BLENDER--STYLE }`}</LogoText>
       </LogoButton>
     </LogoContainer>

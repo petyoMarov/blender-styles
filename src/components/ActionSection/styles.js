@@ -93,7 +93,7 @@ export const ActionTextColumn = styled.div`
   height: 500px;
 
   @media screen and (max-width: 480px) {
-    height: ${({ isNeuralStyle }) => (isNeuralStyle ? '650px' : '550px')};
+    height: ${({ isNeuralStyle }) => (isNeuralStyle ? '700px' : '600px')};
   }
 `;
 

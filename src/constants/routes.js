@@ -1,19 +1,19 @@
 const tabRoutes = [
   {
     title: 'Image Colorizer',
-    path: '/image-colorizer'
+    path: '/blender-styles/image-colorizer'
   },
   {
     title: 'Neural Style',
-    path: '/neural-style'
+    path: '/blender-styles/neural-style'
   },
   {
     title: 'Toonify Yourself',
-    path: '/toonify-yourself'
+    path: '/blender-styles/toonify-yourself'
   },
   {
     title: 'Super Resolution',
-    path: '/super-resolution'
+    path: '/blender-styles/super-resolution'
   }
 ];
 

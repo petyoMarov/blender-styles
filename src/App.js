@@ -12,19 +12,19 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/blender-styles/">
           <Home />
         </Route>
-        <Route path="/image-colorizer">
+        <Route path="/blender-styles/image-colorizer">
           <ImageColorization />
         </Route>
-        <Route path="/neural-style">
+        <Route path="/blender-styles/neural-style">
           <NeuralStyle />
         </Route>
-        <Route path="/toonify-yourself">
+        <Route path="/blender-styles/toonify-yourself">
           <ToonifyYourself />
         </Route>
-        <Route path="/super-resolution">
+        <Route path="/blender-styles/super-resolution">
           <SuperResolution />
         </Route>
         <Route>
