@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/blender-styles/static/js/main.54c6fc06.chunk.js",
-    "main.js.map": "/blender-styles/static/js/main.54c6fc06.chunk.js.map",
+    "main.js": "/blender-styles/static/js/main.b05481ea.chunk.js",
+    "main.js.map": "/blender-styles/static/js/main.b05481ea.chunk.js.map",
     "runtime-main.js": "/blender-styles/static/js/runtime-main.60600ed3.js",
     "runtime-main.js.map": "/blender-styles/static/js/runtime-main.60600ed3.js.map",
     "static/js/2.6bf6e4b3.chunk.js": "/blender-styles/static/js/2.6bf6e4b3.chunk.js",
@@ -22,6 +22,6 @@
   "entrypoints": [
     "static/js/runtime-main.60600ed3.js",
     "static/js/2.6bf6e4b3.chunk.js",
-    "static/js/main.54c6fc06.chunk.js"
+    "static/js/main.b05481ea.chunk.js"
   ]
 }
