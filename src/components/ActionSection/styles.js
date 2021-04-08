@@ -25,16 +25,18 @@ export const ActionRow = styled.div`
   grid-auto-columns: minmax(auto, 1fr);
   column-gap: 100px;
   align-items: center;
-  grid-template-areas: ${({ imgStart }) =>
-    imgStart ? `'imgCol txtCol'` : `'txtCol imgCol'`};
+  grid-template-areas: ${`'imgCol txtCol'`};
 
   @media screen and (max-width: 1150px) {
     column-gap: 40px;
   }
 
   @media screen and (max-width: 950px) {
-    grid-template-areas: ${({ imgStart }) =>
-      imgStart ? `'imgCol' 'txtCol'` : `'imgCol' 'txtCol'`};
+    grid-template-areas: ${`'imgCol' 'txtCol'`};
+  }
+
+  @media screen and (max-width: 480px) {
+    grid-template-areas: ${`'txtCol' 'imgCol'`};
   }
 `;
 
@@ -42,8 +44,16 @@ export const ActionImgColumn = styled.div`
   max-width: 500px;
   height: 500px;
   position: relative;
+  grid-area: imgCol;
+
+  @media screen and (max-width: 768px) {
+    max-width: 400px;
+    height: 400px;
+    margin: 0 auto;
+  }
 
   @media screen and (max-width: 480px) {
+    width: 300px;
     height: 300px;
   }
 `;
@@ -91,9 +101,11 @@ export const ActionTextColumn = styled.div`
   padding: 0 15px;
   max-width: 500px;
   height: 500px;
+  grid-area: txtCol;
 
   @media screen and (max-width: 480px) {
-    height: ${({ isNeuralStyle }) => (isNeuralStyle ? '700px' : '600px')};
+    height: unset;
+    margin-bottom: 50px;
   }
 `;
 
@@ -113,13 +125,16 @@ export const Heading = styled.h2`
   color: #000104;
   line-height: 1.1;
   font-weight: 600;
-  margin-top: 60px;
+  margin-top: 20px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 950px) {
+    margin-top: 50px;
     font-size: 40px;
   }
 
   @media screen and (max-width: 480px) {
+    margin-top: 0;
+    margin-bottom: 50px;
     font-size: 30px;
   }
 `;

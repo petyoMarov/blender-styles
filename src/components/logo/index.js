@@ -9,7 +9,7 @@ export default function Logo() {
         disableRipple
         to="/blender-styles/"
       >
-        <LogoText>{`{ BLENDER--STYLE }`}</LogoText>
+        <LogoText>{`{ BLENDER--STYLES }`}</LogoText>
       </LogoButton>
     </LogoContainer>
   );

@@ -30,7 +30,7 @@ export default function NavBar({ handleTabChange, tabPosition }) {
       <GithubIconButton
         target="_blank"
         component="a"
-        href="https://github.com/petyoMarov/blender-style"
+        href="https://github.com/petyoMarov/blender-styles"
       >
         <GitHubIcon />
       </GithubIconButton>
