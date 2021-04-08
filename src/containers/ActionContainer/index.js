@@ -68,6 +68,10 @@ export default function ActionContainer({ apiId, src, heading, desctiption }) {
     neuralStyleFiles.style
   ]);
 
+  useEffect(() => {
+    console.log(error);
+  }, [error]);
+
   return (
     <ActionSection
       src={resultUrl || src}

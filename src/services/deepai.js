@@ -21,6 +21,7 @@ export const handleUrlUpload = async (
     });
     setResultUrl(resp.output_url);
     setLoading(false);
+    setError(false);
   } catch (err) {
     setLoading(false);
     setError('Error processing given inputs from request.');
@@ -47,6 +48,7 @@ export const handleFileUpload = async (
     });
     setResultUrl(resp.output_url);
     setLoading(false);
+    setError(false);
   } catch (err) {
     setLoading(false);
     setError('Error processing given inputs from request.');
@@ -74,6 +76,7 @@ export const handleNeuralStyleUrlUpload = async (
     });
     setResultUrl(resp.output_url);
     setLoading(false);
+    setError(false);
   } catch (err) {
     setLoading(false);
     setError('Error processing given inputs from request.');
@@ -101,6 +104,7 @@ export const handleNeuralStyleFileUpload = async (
     });
     setResultUrl(resp.output_url);
     setLoading(false);
+    setError(false);
   } catch (err) {
     setLoading(false);
     setError('Error processing given inputs from request.');

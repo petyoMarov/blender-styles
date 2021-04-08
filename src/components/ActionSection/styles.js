@@ -39,7 +39,6 @@ export const ActionRow = styled.div`
 `;
 
 export const ActionImgColumn = styled.div`
-  margin-bottom: 15px;
   max-width: 500px;
   height: 500px;
   position: relative;
