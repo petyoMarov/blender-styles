@@ -5,7 +5,7 @@ import superResolutionSrc from '../assets/images/super-resolution.svg';
 
 const infoSectionsContent = [
   {
-    path: '/image-colorizer',
+    path: '/blender-styles/image-colorizer',
     title: 'Image Colorization',
     subtitle:
       'Colorize black and white images using the image colorization API. Add color to old family photos and historic images and bring them back to life with colorization.',
@@ -17,7 +17,7 @@ const infoSectionsContent = [
     darkBg: true
   },
   {
-    path: '/neural-style',
+    path: '/blender-styles/neural-style',
     title: 'Neural Style',
     subtitle:
       'Turn any photo into an artwork! We use an algorithm inspired by the human brain. It uses the stylistic elements of one image to draw the content of another. Get your own artwork in just three steps.',
@@ -29,7 +29,7 @@ const infoSectionsContent = [
     darkBg: false
   },
   {
-    path: '/toonify-yourself',
+    path: '/blender-styles/toonify-yourself',
     title: 'Toonify Yourself',
     subtitle: `Toonify is a set of AI powered tools for face transformation. Upload a photo and see what you'd look like in an animated movie. Our neural networks will reimagine your face, see what they come up with!`,
     imgStart: true,
@@ -40,7 +40,7 @@ const infoSectionsContent = [
     darkBg: true
   },
   {
-    path: '/super-resolution',
+    path: '/blender-styles/super-resolution',
     title: 'Super Resolution',
     subtitle:
       'The main challenge behind super-resolution is being able to turn low quality pictures into high definition images. This increase in quality involves not only the pixel count, but also some extra details such as texture quality and anti-aliasing among other things. Several techniques and approaches are used to achieve the results and the main challenge today is to make it as accessible and optimized as possible.',
