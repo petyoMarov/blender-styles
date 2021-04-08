@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "/blender-styles/static/js/main.d6140e7f.chunk.js",
+    "main.js.map": "/blender-styles/static/js/main.d6140e7f.chunk.js.map",
+    "runtime-main.js": "/blender-styles/static/js/runtime-main.60600ed3.js",
+    "runtime-main.js.map": "/blender-styles/static/js/runtime-main.60600ed3.js.map",
+    "static/js/2.e88da662.chunk.js": "/blender-styles/static/js/2.e88da662.chunk.js",
+    "static/js/2.e88da662.chunk.js.map": "/blender-styles/static/js/2.e88da662.chunk.js.map",
+    "index.html": "/blender-styles/index.html",
+    "static/js/2.e88da662.chunk.js.LICENSE.txt": "/blender-styles/static/js/2.e88da662.chunk.js.LICENSE.txt",
+    "static/media/video.56d119b0.mp4": "/blender-styles/static/media/video.56d119b0.mp4"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.60600ed3.js",
+    "static/js/2.e88da662.chunk.js",
+    "static/js/main.d6140e7f.chunk.js"
+  ]
+}
