@@ -18,16 +18,32 @@ export default function Footer() {
           {`{BLENDER-STYLE}`} © {new Date().getFullYear()} - All Rights Reserved
         </FooterText>
         <SocialIcons>
-          <SocialIconLink href="/" target="_blank" arial-label="Facebook">
+          <SocialIconLink
+            href="/blender-styles/"
+            target="_blank"
+            arial-label="Facebook"
+          >
             <FacebookIcon />
           </SocialIconLink>
-          <SocialIconLink href="/" target="_blank" arial-label="Instagram">
+          <SocialIconLink
+            href="/blender-styles/"
+            target="_blank"
+            arial-label="Instagram"
+          >
             <InstagramIcon />
           </SocialIconLink>
-          <SocialIconLink href="/" target="_blank" arial-label="Youtube">
+          <SocialIconLink
+            href="/blender-styles/"
+            target="_blank"
+            arial-label="Youtube"
+          >
             <YouTubeIcon />
           </SocialIconLink>
-          <SocialIconLink href="/" target="_blank" arial-label="Youtube">
+          <SocialIconLink
+            href="/blender-styles/"
+            target="_blank"
+            arial-label="Youtube"
+          >
             <GitHubIcon />
           </SocialIconLink>
         </SocialIcons>
